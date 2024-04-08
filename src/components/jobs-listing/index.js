@@ -62,7 +62,6 @@ function CustomPrevArrow(props) {
 
 const JobListings = ({ jobs }) => {
 
-  const [isFavorited, setIsFavorited] = useState(false);
   const [favoritedJobs, setFavoritedJobs] = useState(
     jobs.reduce((acc, job) => ({ ...acc, [job.id]: job.favorited }), {})
   );
