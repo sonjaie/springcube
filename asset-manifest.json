@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/springcube/static/css/main.3bece056.css",
+    "main.js": "/springcube/static/js/main.cdd231de.js",
+    "static/js/453.8e9b5ab6.chunk.js": "/springcube/static/js/453.8e9b5ab6.chunk.js",
+    "static/media/logo.png": "/springcube/static/media/logo.c1607b185f6364efb664.png",
+    "static/media/hero-banner.jpg": "/springcube/static/media/hero-banner.6238f257dd80d4e3c796.jpg",
+    "static/media/slick.svg": "/springcube/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/springcube/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/springcube/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/springcube/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/springcube/index.html",
+    "main.3bece056.css.map": "/springcube/static/css/main.3bece056.css.map",
+    "main.cdd231de.js.map": "/springcube/static/js/main.cdd231de.js.map",
+    "453.8e9b5ab6.chunk.js.map": "/springcube/static/js/453.8e9b5ab6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3bece056.css",
+    "static/js/main.cdd231de.js"
+  ]
+}
