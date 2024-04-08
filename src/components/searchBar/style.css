@@ -1,0 +1,68 @@
+.container {
+    border: 1px solid #ccc;
+    border-radius: 53px;
+    padding: 8px;
+    display: table;
+    margin: auto;
+    width: 95%;
+    height: 35px;
+    margin-top: -1%;
+    background-color: white;
+}
+
+.job-search,
+.select-country,
+.select-state,
+.job-function {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.separator {
+    display: table-cell; /* Make separator behave like a table cell */
+    vertical-align: middle;
+    padding: 0 5px; /* Adjust the spacing around the separator */
+}
+
+.icon-job,
+.icon-country,
+.icon-state,
+.icon-job-function,
+.jobs-placeholder,
+.country-placeholder,
+.job-function-placeholder,
+.state-placeholder {
+    display: inline-block; /* Ensure icons and placeholders are inline */
+    vertical-align: middle;
+    margin-right: 5px; /* Adjust the spacing between icon and placeholder */
+}
+
+.search-bold-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.advance-search {
+    margin-top: 1.5%;
+}
+
+.MuiInputBase-root {
+    color: grey !important;
+}
+
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+    background-color: rgb(156 155 155 / 8%) !important;
+}
+
+.MuiButtonBase-root {
+    color: grey !important;
+}
+
+.MuiInput-underline:before, .MuiInput-underline:after {
+    border-bottom: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+input.MuiInputBase-input.MuiInput-input, .MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input {
+    font-weight: bold;
+}

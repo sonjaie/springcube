@@ -1,0 +1,162 @@
+/* style.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+.logo-and-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.nav-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #666;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 3%;
+}
+
+.post-job-wrapper {
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.action-button {
+    margin-right: 10px;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    text-decoration: none; /* No underline for links */
+    font-weight: bold; /* Bold font */
+}
+
+.fa-pencil-alt {
+    margin-right: 5px;
+}
+
+.action-button.post-job::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline */
+    left: 0;
+    right: 0;
+    height: 2px; /* Adjust the thickness of the underline */
+    background: white; /* Underline color */
+    border-radius: 1px;
+}
+
+.action-button.register:hover,
+.action-button.sign-in:hover {
+    background-color: #7D4CDB; /* Background color on hover */
+    color: white; /* Text color on hover */
+    border-color: #7D4CDB; /* Border color on hover */
+}
+
+
+.action-button.sign-in {
+    background-color: #7D4CDB; /* Adjust to your color */
+    color: white;
+    border: none;
+    position: relative; /* For absolute positioning of the underline */
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex; /* To align icon and text */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* No border for 'Sign In' and 'Post a Job' */
+}
+
+.action-button.post-job {
+    color: #333;
+    border: none;
+    position: relative; /* For absolute positioning of the underline */
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex; /* To align icon and text */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* No border for 'Sign In' and 'Post a Job' */
+}
+
+/* Remove margin from the last button to prevent spacing issues */
+.action-button:last-child {
+    margin-right: 0;
+}
+
+/* Make sure the order is correct */
+.post-job-wrapper {
+    order: -1; /* This ensures 'Post a Job' is on top */
+}
+
+
+.register {
+    background-color: transparent;
+    color: #555;  /* Adjust color to match the design */
+    /* Additional styles for the register button if needed */
+}
+
+.sign-in {
+    background-color: #7D4CDB;  /* Adjust background color to match the design */
+    color: white;  /* Adjust text color to match the design */
+    /* Additional styles for the sign-in button if needed */
+}

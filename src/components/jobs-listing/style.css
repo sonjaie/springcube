@@ -1,0 +1,188 @@
+.job-listing {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space between and around content items */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    margin-bottom: 5%;
+    padding: 20px;
+    height: 100%; /* Make sure the card takes full height */
+  }
+
+  .job-image-container {
+    align-self: center; /* Center the image container if it's not already */
+    margin-bottom: 20px; /* Give some space below the image */
+  }
+
+  .job-image-container img {
+    width: 100px; /* Adjust as necessary */
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .job-details-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    flex: 1; /* Fill available space */
+  }
+
+  .job-tags, .job-actions {
+    margin-top: auto; /* Push tags and actions to the bottom */
+  }
+
+  .apply-button, .favorite-button {
+    margin-top: 20px; /* Space above the buttons, if necessary */
+    align-self: center; /* Center buttons in the card */
+  }
+
+  .job-details-container h3, .job-details-container p {
+    margin: 5px 0;
+  }
+
+  .job-details-container p {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    display: flex;
+  }
+
+  .icon svg {
+    margin-top: -0.125em;
+    color: #7D4CDB;
+  }
+
+  svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    color: #7D4CDB;
+  }
+
+  .job-details-container p .icon {
+    margin-right: 10px;
+  }
+
+  .job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .tag {
+    background: #f2f4f8;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .job-listing h3 {
+    margin-bottom: 10px;
+  }
+  
+  .job-listing p {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .job-listing .job-tags span {
+    background: #f2f4f8;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .job-listing .apply-button {
+    margin-top: 20px;
+    border: none;
+    background: #7D4CDB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+
+.slick-dots {
+    display: none !important;
+}
+
+.slick-next:before {
+  content: '›';
+  font-size: larger;
+}
+
+.slick-prev:before {
+  content: '‹';
+  font-size: larger;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #000;
+    opacity: 0.2;
+    width: 35px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.slick-slider.slick-initialized {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    background: grey !important;
+}
+
+.job-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .apply-button {
+    background: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .favorite-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    display: block;
+    margin-left: 20.5%;
+  }
+
+  .material-icons > svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    color: grey;
+  }
+
+  p.new-job-posted {
+    font-size: larger;
+    color: grey;
+}

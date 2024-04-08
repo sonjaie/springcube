@@ -1,0 +1,26 @@
+
+  .hero-section {
+    background-image: url('../../assets/images/hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: black;
+    background-attachment: fixed;
+  }
+  
+  .hero-text {
+    text-align: left;
+    margin-left: 2%;
+  }
+  
+  .big-bold-text {
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: bold; /* Make text bold */
+  }
+  
+  .bold-text {
+    font-size: 2rem;
+    font-weight: bold; /* Make text bold */
+  }
