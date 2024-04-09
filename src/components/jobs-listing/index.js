@@ -10,33 +10,31 @@ import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './style.css';
 
-const JobListing = ({ jobs, onClick, isFavorited }) => {
+const JobListing = ({ job, onFavoriteClick, isFavorited }) => {
   
   return (
+    <>
     <div className="job-listing">
-      <button className="favorite-button" onClick={onClick}>
-        <span className="material-icons">
-          {isFavorited ? <FavoriteBorderIcon style={{ color: 'red' }} /> : <FavoriteBorderIcon />}
-        </span>
-      </button>
-      <div className="job-image-container">
-        <img src={rocketLogo} alt="Job Icon" />
-      </div>
-      <div className="job-details-container">
-        <h3>{jobs?.title}</h3>
-        <p><span className="icon company-icon"><BusinessOutlinedIcon /></span>{jobs?.company}</p>
-        <p><span className="icon location-icon"><CalendarMonthOutlinedIcon /></span>{jobs?.location} ({jobs?.workType})</p>
-        <p><span className="icon time-icon"><PlaceOutlinedIcon /></span>Published {jobs?.publishedDate}</p>
-        <p><AttachMoneyOutlinedIcon /><strong>Salary: {jobs?.salary}</strong></p>
-        <div className="job-tags">
-          {jobs?.tags?.map(tag => <span key={tag} className="tag">{tag}</span>)}
+      <div className="flex-container">
+        <div className="job-image-container">
+          <img src={rocketLogo} alt="Job Icon" />
         </div>
-        
-        <button className="apply-button">
-          Apply Now
-        </button>
+        <div className="job-details-container">
+          <h3>{job?.title}</h3>
+          <p><span className="icon company-icon"><BusinessOutlinedIcon /></span>{job?.company}</p>
+          <p><span className="icon location-icon"><CalendarMonthOutlinedIcon /></span>{job?.location} ({job?.workType})</p>
+          <p><span className="icon time-icon"><PlaceOutlinedIcon /></span>Published {job?.publishedDate}</p>
+          <p><AttachMoneyOutlinedIcon /><strong>Salary: {job?.salary}</strong></p>
+          <button className="apply-button">
+            Apply Now
+          </button>
+        </div>
+      </div>
+      <div className="job-tags">
+        {job?.tags?.map(tag => <span key={tag} className="tag">{tag}</span>)}
       </div>
     </div>
+    </>
   );
 };
 
@@ -65,6 +63,9 @@ const JobListings = ({ jobs }) => {
   const [favoritedJobs, setFavoritedJobs] = useState(
     jobs.reduce((acc, job) => ({ ...acc, [job.id]: job.favorited }), {})
   );
+
+  const screenWidth = window.innerWidth;
+  console.log("screenWidth", screenWidth)
 
   const toggleFavorite = (jobId) => {
     setFavoritedJobs((prevFavoritedJobs) => ({
@@ -108,7 +109,7 @@ const JobListings = ({ jobs }) => {
       <Slider {...settings}>
         {jobs?.map(job => (
           <div key={job.id}>
-            <JobListing jobs={job} onClick={() => toggleFavorite(job.id)} isFavorited={favoritedJobs[job.id]}/>
+            <JobListing job={job} onFavoriteClick={() => toggleFavorite(job.id)} isFavorited={favoritedJobs[job.id]}/>
           </div>
         ))}
       </Slider>
