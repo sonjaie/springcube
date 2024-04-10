@@ -7,7 +7,7 @@ import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './style.css';
 
 const JobListing = ({ job, onFavoriteClick, isFavorited }) => {
