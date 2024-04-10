@@ -1,13 +1,17 @@
 .job-listing {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Distribute extra space */
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 20px;
+    /* Make sure the cards can grow and shrink as needed */
+    flex: 1;
+    min-width: 250px;
+    height: 340px;
   }
 
   .flex-container {
@@ -65,9 +69,9 @@
   .job-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 15px;
   }
 
   .tag {
@@ -76,6 +80,7 @@
     padding: 5px 15px;
     font-size: 14px;
     margin-bottom: 10px; 
+    margin-top: 10px;
   }
   
   .job-listing h3 {
@@ -146,6 +151,7 @@
     border-radius: 20px;
     cursor: pointer;
     text-transform: uppercase;
+    align-self: center;
   }
 
   .material-icons > svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
@@ -175,7 +181,22 @@
   }
 
   .apply-button-container {
-    align-self: flex-end; /* Align Apply Now button to the right */
+    margin-top: auto; /* This pushes the button to the bottom of the flex container */
+    width: 100%; /* To make sure the button aligns with the tags */
+    display: flex;
+    justify-content: end;/* Align Apply Now button to the right */
+  }
+
+  .job-listings-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust as needed */
+    /* Ensure that children stretch to the size of the tallest one */
+    align-items: stretch; 
+  }
+
+  .job-tags.few-tags {
+    justify-content: center;
   }
 
 @media screen and (min-width: 1360px) and (max-width: 1680px) {
@@ -185,5 +206,16 @@
 
     .job-listing p > strong {
         margin-right: 20%;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    div[data-index="3"] .apply-button-container {
+        margin-top: 5% !important;
+        margin-bottom: -3%;
+    }
+
+    .apply-button-container {
+        margin-top: -3% !important;
     }
 }

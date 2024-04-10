@@ -25,14 +25,18 @@ const JobListing = ({ job, onFavoriteClick, isFavorited }) => {
           <p><span className="icon location-icon"><CalendarMonthOutlinedIcon /></span>{job?.location} ({job?.workType})</p>
           <p><span className="icon time-icon"><PlaceOutlinedIcon /></span>Published {job?.publishedDate}</p>
           <p><AttachMoneyOutlinedIcon /><strong>Salary: {job?.salary}</strong></p>
-          <button className="apply-button">
-            Apply Now
-          </button>
         </div>
       </div>
       <div className="job-tags">
-        {job?.tags?.map(tag => <span key={tag} className="tag">{tag}</span>)}
-      </div>
+    {job?.tags?.slice(0, 5).map((tag, index) => (
+      <span key={index} className="tag">{tag}</span> // use index as key if tag is not unique
+    ))}
+  </div>
+  <div className="apply-button-container">
+    <button className="apply-button">
+      Apply Now
+    </button>
+  </div>
     </div>
     </>
   );

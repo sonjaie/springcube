@@ -7,7 +7,7 @@ const jobsData = [
       workType: 'Hybrid',
       publishedDate: '2 weeks ago',
       salary: 'SGD5000 - SGD10000',
-      tags: ['Tech Startup', 'Business Analytics', 'Freelance', 'Freelance','Freelance','Freelance','Freelance','Freelance'],
+      tags: ['Tech Startup', 'Business Analytics', 'Freelance', 'Audit','Tech Startup','Freelance','Freelance','Freelance'],
       favorited: false
     },
     {
